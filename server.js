@@ -11,16 +11,17 @@ app.get('/', (req, res) => {
 });
 
 app.get("/date", (req, res) => {
-    let now = timeSendMessage();
-    res.send(now);
+    res.send(timeSendMessage());
 });
 
 io.on('connection', (socket) => {
-    // console.log('a user connected');
-    //
-    // socket.on('disconnect', () => {
-    //     console.log('user disconnected');
-    // });
+    countClient(true);
+    io.emit('count user', countUser);
+
+    socket.on('disconnect', () => {
+        countClient(false);
+        io.emit('count user', countUser);
+    });
 
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg);
@@ -35,7 +36,7 @@ server.listen(app.get('port'), () => {
 function timeSendMessage() {
     let now = new Date();
     let day = now.getDate();
-    let month = now.getMonth();
+    let month = now.getMonth() + 1;
     let year = now.getFullYear();
     let hours = now.getHours();
     let minutes = now.getMinutes();
@@ -49,4 +50,13 @@ function timeSendMessage() {
     }
 
     return day + "." + month + "." + year + "_" + hours + ":" + minutes;
+}
+
+let countUser = 0;
+function countClient(value) {
+    if(value === true) {
+        countUser++;
+    } else {
+        countUser--;
+    }
 }

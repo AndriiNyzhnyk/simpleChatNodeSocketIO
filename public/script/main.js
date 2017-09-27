@@ -11,6 +11,11 @@ $(document).ready(() => {
         $('#messages').append($('<li>').text(msg));
     });
 
+    socket.on('count user', (count) => {
+        $('#countUser').val('');
+        $('#countUser').val('User online: ' + count);
+    });
+
     function date() {
         $.ajax({
             url: "date/",
