@@ -1,0 +1,71 @@
+body {
+    font-family: Arial;
+    font-size: 1.7em;
+    margin: 0;
+    padding: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+ul {
+    margin: 10px 0;
+    padding: 0;
+}
+
+ul li {
+    list-style-type: none;
+    margin: 2px;
+}
+
+#menuChat {
+    padding: 12px;
+    margin: 0 30px;
+}
+
+#inputMessage {
+    width: 300px;
+    height: 35px;
+    font-size: 0.9em;
+}
+
+#submit {
+    height: 35px;
+    font-size: 0.9em;
+}
+
+#withoutBlockMessages {
+    width: 100%;
+    padding: 12px;
+    margin: 0;
+    background-color: silver;
+
+}
+
+#content {
+    background-color: white;
+    min-height: 120px;
+}
+
+#timeMessage {
+    float: left;
+    width: 250px;
+    margin-left: 15px;
+}
+
+#timeMessage ul li {
+    color: lightgreen;
+}
+
+#blockMessages {
+    float: left;
+}
+
+#blockMessages ul li {
+    list-style-type: square;
+}
+
+#welcome {
+    margin-left: 40px;
+}
