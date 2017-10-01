@@ -35,7 +35,7 @@ app.use((req, res, next) => {
     res.send("404");
 });
 
-// Обробник 505 помилки
+// Обробник 500 помилки
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500);
@@ -56,6 +56,10 @@ function timeSendMessage() {
     let year = now.getFullYear();
     let hours = now.getHours();
     let minutes = now.getMinutes();
+
+    if(day < 10) {
+        day = "0" + day;
+    }
 
     if(month < 10) {
         month = "0" + month;
