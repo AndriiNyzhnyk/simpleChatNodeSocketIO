@@ -42,8 +42,7 @@ app.use((req, res, next) => {
 app.use((err, req, res, next) => {
     console.error(err.stack);
     res.status(500);
-    res.type("text/plain");
-    res.send("500");
+    res.render('500.hbs');
 });
 
 
