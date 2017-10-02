@@ -2,7 +2,8 @@
   "name": "simpleChatSocket",
   "version": "0.0.1",
   "dependencies": {
-    "express": "^4.15.5",
+    "express": "^4.16.1",
+    "hbs": "^4.0.1",
     "socket.io": "^2.0.3"
   }
 }

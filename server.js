@@ -4,10 +4,11 @@ let server = require('http').Server(app);
 let io = require('socket.io')(server);
 
 app.set('port', process.env.PORT || 3000);
+app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/public"));
 
 app.get('/', (req, res) => {
-    res.sendFile('index.html');
+    res.render('index.hbs');
 });
 
 app.get("/date", (req, res) => {
@@ -31,8 +32,7 @@ io.on('connection', (socket) => {
 // Обробник 404 помилки
 app.use((req, res, next) => {
     res.status(404);
-    res.type("text/plain");
-    res.send("404");
+    res.render('404.hbs')
 });
 
 // Обробник 500 помилки
