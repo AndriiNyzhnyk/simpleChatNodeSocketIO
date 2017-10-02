@@ -2,10 +2,13 @@ let express = require('express');
 let app = express();
 let server = require('http').Server(app);
 let io = require('socket.io')(server);
+let favicon = require('serve-favicon');
+let path = require('path');
 
-app.set('port', process.env.PORT || 3000);
-app.set("view engine", "hbs");
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(__dirname + "/public"));
+app.set('port', process.env.PORT || 3000);
+app.set('view engine', 'hbs');
 
 app.get('/', (req, res) => {
     res.render('index.hbs');
