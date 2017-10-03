@@ -46,10 +46,26 @@ app.use((err, req, res, next) => {
 });
 
 
-server.listen(app.get('port'), () => {
-    console.log( 'Express запущенний на http://localhost:' +
-        app.get('port') + '; нажміть Ctrl+C для завершення.' );
-});
+
+// -----------------
+function startServer() {
+    server.listen(app.get('port'), () => {
+        console.log( 'Express запущенний на http://localhost:' +
+            app.get('port') + '; нажміть Ctrl+C для завершення.' );
+    });
+}
+
+if(require.main === module){
+// Додаток запускається безпосередньо;
+// запускаємо сервер
+    startServer();
+} else {
+// Додаток імпортується як модуль
+// за допомогою "require"
+// експортуємо функцію для створення сервера
+    module.exports = startServer;
+}
+// -------------------
 
 function timeSendMessage() {
     let now = new Date();
