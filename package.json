@@ -6,5 +6,8 @@
     "hbs": "^4.0.1",
     "serve-favicon": "^2.4.5",
     "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "loadtest": "^2.3.0"
   }
 }
