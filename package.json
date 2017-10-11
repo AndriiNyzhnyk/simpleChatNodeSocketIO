@@ -2,6 +2,7 @@
   "name": "simpleChatSocket",
   "version": "0.0.1",
   "dependencies": {
+    "cors": "^2.8.4",
     "express": "^4.16.1",
     "hbs": "^4.0.1",
     "helmet": "^3.8.2",
