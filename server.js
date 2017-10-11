@@ -5,7 +5,9 @@ let io = require('socket.io')(server);
 let favicon = require('serve-favicon');
 let path = require('path');
 let func = require('./functions.js');
+let helmet = require('helmet');
 
+app.use(helmet());
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(express.static(__dirname + "/public"));
 app.set('port', process.env.PORT || 3000);
