@@ -5,9 +5,9 @@
     "cors": "^2.8.4",
     "express": "^4.16.2",
     "hbs": "^4.0.1",
-    "helmet": "^3.8.2",
+    "helmet": "^3.9.0",
     "serve-favicon": "^2.4.5",
-    "socket.io": "^2.0.3"
+    "socket.io": "^2.0.4"
   },
   "devDependencies": {
     "loadtest": "^2.3.0"
