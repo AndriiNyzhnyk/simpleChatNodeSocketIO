@@ -7,22 +7,24 @@
     <link rel="stylesheet" type="text/css" href="/style/main.css">
 </head>
 <body>
+    <div id="container">
     <p id="welcome">Вітаю, Ви підключенні до чату</p>
 
-    <div id="withoutBlockMessages">
-        <div id="content">
-            <div class="clear"></div>
-            <div id="timeMessage">
-                <ul id="times"></ul>
-            </div>
+        <div id="withoutBlockMessages">
+            <div id="content">
+                <div class="clear"></div>
+                <div id="timeMessage">
+                    <ul id="times"></ul>
+                </div>
 
-            <div id="blockMessages">
-                <ul id="messages"></ul>
+                <div id="blockMessages">
+                    <ul id="messages"></ul>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
         </div>
-    </div>
 
+        <div class="clear"></div>
         <div id="menuChat">
             <form>
                 <input type="text" autocomplete="off" name="message"
@@ -31,6 +33,8 @@
                 <input type="text" name="online" id="countUser" readonly>
             </form>
         </div>
+    </div>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.7/es5-shim.min.js"></script>

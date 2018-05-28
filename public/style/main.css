@@ -19,9 +19,18 @@ ul li {
     margin: 2px;
 }
 
+#container {
+    width: 100%;
+}
+
 #menuChat {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
     padding: 12px;
-    margin: 0 30px;
+    margin: 0;
+    background-color: white;
 }
 
 #inputMessage {
@@ -36,16 +45,15 @@ ul li {
 }
 
 #withoutBlockMessages {
-    width: 100%;
     padding: 12px;
-    margin: 0;
+    margin: 0 0 110px 0;
     background-color: silver;
-
 }
 
 #content {
     background-color: white;
     min-height: 430px;
+    margin: 0 auto;
 }
 
 #timeMessage {
